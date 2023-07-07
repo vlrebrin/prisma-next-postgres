@@ -6,9 +6,9 @@ CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
-    "role" "Role" NOT NULL DEFAULT E'DEVELOPER',
+    "role" "Role" NOT NULL DEFAULT 'DEVELOPER',
     "email" TEXT NOT NULL,
     "avatar" TEXT NOT NULL,
 
-    PRIMARY KEY ("id")
+    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );

@@ -1,5 +1,5 @@
 {
-  "name": "my-next-prisma-app",
+  "name": "prisma-next-postgres",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,15 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "@prisma/client": "^2.24.1",
-    "@types/node": "^15.12.2",
-    "@types/react": "^17.0.11",
-    "next": "10.2.3",
-    "prisma": "^2.24.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3",
-    "typescript": "^4.3.2"
+    "@prisma/client": "^4.16.2",
+    "@types/node": "^20.4.0",
+    "@types/react": "^18.2.14",
+    "next": "13.4.9",
+    "prisma": "^4.16.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4",
+    "typescript": "^5.1.6"
   }
 }
