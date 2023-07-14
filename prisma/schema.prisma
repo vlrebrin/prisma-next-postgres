@@ -1,27 +1,14 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL")
+  directUrl         = env("POSTGRES_URL_NON_POOLING")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
-
-// generator client {
-//   provider = "prisma-client-js"
-//   previewFeatures = ["jsonProtocol"]
-// }
-
-// datasource db {
-//   provider = "postgresql"
-//   url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-//   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-//   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
-// }
-
 
 model User {
   id        Int    @id @default(autoincrement())
@@ -30,7 +17,8 @@ model User {
   role      Role   @default(DEVELOPER)
   email     String
   avatar    String
-  @@map(name: "users")// из. Vercel
+
+  @@map("users")
 }
 
 enum Role {

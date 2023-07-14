@@ -17,6 +17,7 @@ import prisma from "../lib/prisma";
 import { useState } from "react";
 
 export async function getServerSideProps() {
+  //const users: Prisma.UserUncheckedCreateInput[] = await prisma.user.findMany();
   const users: Prisma.UserUncheckedCreateInput[] = await prisma.user.findMany();
   return {
     props: { initialUsers: users },

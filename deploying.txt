@@ -1,0 +1,5 @@
+vercel link
+vercel env pull .env.development.local
+//npx prisma generate
+npx prisma db pull
+npx prisma generate
